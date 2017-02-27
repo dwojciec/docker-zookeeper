@@ -23,7 +23,7 @@ ENV ZOOKEEPER_UID 2181
 ENV HOME /home/${ZOOKEEPER_USER}
 
 RUN apt-get update && \
-    apt-get install -y iproute netcat dnsutils curl tar && \
+    apt-get install -y iproute netcat dnsutils curl tar jq && \
     apt-get clean && \
     mkdir -p ${HOME} && \
     groupadd -r ${ZOOKEEPER_GROUP} && \
